@@ -12,7 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -21,5 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".singlemode.SingleActivity"/>
+        <activity android:name=".buildermode.BuilderActivity">
+        </activity>
     </application>
+
 </manifest>

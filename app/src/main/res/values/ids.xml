@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="custom_dialog_content_text" type="id"/>
+    <item name="custom_dialog_confirm_button" type="id"/>
+    <item name="builder_activity_note_dialog_button" type="id"/>
+    <item name="builder_activity_content_dialog_button" type="id"/>
+</resources>

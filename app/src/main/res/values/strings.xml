@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">DesignMode</string>
+    <string name="custom_dialog_confirm_text">OK</string>
+    <string name="custom_dialog_note_text">Sure</string>
+    <string name="builder_activity_note_dialog_text">Note</string>
+    <string name="builder_activity_content_dialog_text">Content</string>
+    <string name="main_activity_custom_dialog">Dialog</string>
 </resources>
