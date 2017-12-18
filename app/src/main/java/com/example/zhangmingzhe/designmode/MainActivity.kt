@@ -4,7 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.TextView
-import com.example.zhangmingzhe.designmode.buildermode.BuilderActivity
+import com.example.zhangmingzhe.designmode.kotlinstudy.KotlinStudyActivity
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         findViewById<TextView>(R.id.builder_activity).setOnClickListener({
-            startActivity(Intent(this, BuilderActivity::class.java))
+            startActivity(Intent(this, KotlinStudyActivity::class.java))
         })
     }
 }

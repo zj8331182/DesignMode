@@ -22,6 +22,8 @@
         <activity android:name=".singlemode.SingleActivity"/>
         <activity android:name=".buildermode.BuilderActivity">
         </activity>
+        <activity android:name=".kotlinstudy.KotlinStudyActivity">
+        </activity>
     </application>
 
 </manifest>

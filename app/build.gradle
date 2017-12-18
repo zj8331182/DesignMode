@@ -1,5 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     signingConfigs {
@@ -18,6 +20,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
     buildToolsVersion '27.0.1'
     dexOptions {
         incremental true
@@ -28,13 +34,22 @@ android {
     }
 }
 
+androidExtensions {
+    experimental = true
+    defaultCacheImplementation = "SPARSE_ARRAY" // also SPARSE_ARRAY, NONE
+}
+
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     testImplementation 'junit:junit:4.12'
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+//    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    androidTestCompile 'junit:junit:4.12'
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
 }
+
 repositories {
     mavenCentral()
 }
